@@ -1,0 +1,34 @@
+proxy-listen: 127.0.0.1:8123
+ssh-host: example.com:22
+ssh-user: proxyonly
+dns-map:
+  '*example.com': 127.0.0.1
+  'another.example.org': 127.0.0.1
+ssh-key: |
+  -----BEGIN RSA PRIVATE KEY-----
+  MIIEpQIBAAKCAQEA0WOcrD3qsTGTHTR+f4sa9+IJT/umhXHToXHaY80gdQg4vGpi
+  FfO3X1ptfb1ZyxpKalvJmBJno0lhAIK5RxdrW0OILU/r1dAIh8kKSyF+RsFpMMcC
+  0YT10yciZ+DACpHXXi4kngVIRutyZXoFclbE7uRNog+KheVhmTBdlpCBGSb+gR/K
+  uq6f4ti0tnfdEG6cx98Rlzzvh/Q3F4GMOjJohlB7/upWws+K0vdovctj+00L70b8
+  H2f93i4Xi2DvX7BTlviozwpfRPkjgGTyfW63UgjSeblNEpSRbMS4meK+5NwGi/H5
+  WT5N4nWbEIGXLQM75zcQbAN/iBKVU8Sujfjf7wIDAQABAoIBAQCO1APq+dE9TTOs
+  mEIxfhHHRMhVZrMQE7ToS2FM8n9RVWpeG7MMhlJvGJ/XRXIauLRKGJJKyUMofsVM
+  M99uPutcNZSOVBXqox0uglQjK5WXbhbyzs19XdTRU8CEWyqkCxd9hrwzjibfOXuu
+  /Kz6cXWj/td11GQJMY6BkBxGuAtXu6XBAwQrY2kAuPT5OztewYqvDw1OGj2JH9tr
+  F0vi0rVYjkWJjvohON5v+hy8S207CktJLmdOUUc3rYpPc8A/0XwpVCq2nPAvfyMN
+  ptx1Ybc9xB7jgaI/0Ovp37Ui0UI8kkT3gkvmgKi0gRhVj9BaK4wkNd33BUGsFnj9
+  i2EphQsBAoGBAOk/mt9Vcpyovh4Tm3a+5QTqan4UCFEm0kCfPbUHSEO82So9hjTd
+  LIimz4tZYTPwzJeUrUNN2whdCL2fbeVo26mrZXnaXWcuauoaKz3c1PMFsAq4HLSk
+  ALLuHdqBE30GqWCjFb+TBWCzhVSKRSD1WY8fwoEQu1GRhoRli8EZeEmNAoGBAOXQ
+  OHmDyzJ7VF8B3/JbFYrCXspSDSc/bfxFZcsjWLAs8zUIMPwOBrLGT72PzFriaylL
+  D3UI7z2nU4TRwXi3391xb+J6lmPzd5QI5Px7mDp/URpbuMhvYlMSSN23SLkVmuiO
+  efv3/pDjM0V6dibQJm6RM61V8wKd5jIq2mDIZSprAoGAGnuXSP45qiHanC2bvCrG
+  c/1to+0AWL5wptetuO0fvlklyw77OutV0BoofGjkiXIwuJEv7vFbCiMOCAGfB6oV
+  LrmAJwqtCjcR+oyIFlkJcKJXr4/h6nyoe6hfiVyYatyjxI4fvQWjWaxoWgXs/WX+
+  CisP+Xl92zALtuKUsJMEvk0CgYEAqHxv6ybk4q3ovX7yYQzGTmUSeeKOIiguyrVW
+  XAgeDYvnAwpuX10pLAiYjbHPcRJu3mdZfcR/IgR7BvWBkq+8QO3ZyYF2oPDuyml6
+  +GDkyn5tR5XXc5u1ypGtOmAVwRxF5hoO9Nxslmz8OgP+e5Y/lvB9oqdQ8qoxCrbA
+  RBSnluECgYEA5Q9Wv9yZUoAvFwnw+GmF0JbyYG45YtNBylJfn5LZ1SClL14O4dUD
+  637tB2OrcZwOunYLE8d3gi8cNWBv8TC9nLHyZWJinYXOetgmQYfCodW3NhSDoXXt
+  pIqeUyeFghhjtwLtbxC6R5iKjhB5PzwGhCAbRAseIr8Pd/TFwOw3psY=
+  -----END RSA PRIVATE KEY-----

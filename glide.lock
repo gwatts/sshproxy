@@ -1,0 +1,17 @@
+hash: 584a0f8acbb029a3a82fd1e02ebad7da7beeca3191f6e9aa4c6fbbfd30125b6b
+updated: 2016-05-30T12:43:09.706624605-07:00
+imports:
+- name: github.com/Bowery/prompt
+  version: 3a76720709401fd06e29c3105c51f18b9f001108
+- name: github.com/gwatts/goproxy
+  version: c6e200dc0d451203aa77f9bec69a104779d01764
+- name: golang.org/x/crypto
+  version: 5bcd134fee4dd1475da17714aac19c0aa0142e2f
+  subpackages:
+  - ssh
+  - curve25519
+  - ed25519
+  - ed25519/internal/edwards25519
+- name: gopkg.in/yaml.v2
+  version: a83829b6f1293c91addabc89d0571c246397bbf4
+devImports: []

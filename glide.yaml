@@ -1,0 +1,8 @@
+package: github.com/gwatts/sshproxy
+import:
+- package: github.com/Bowery/prompt
+- package: github.com/gwatts/goproxy
+- package: golang.org/x/crypto
+  subpackages:
+  - ssh
+- package: gopkg.in/yaml.v2
