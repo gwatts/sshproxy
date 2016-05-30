@@ -15,12 +15,12 @@ import (
 
 type config struct {
 	filename    string
-	ProxyListen string            `yaml:"proxy-listen"`
-	SSHHost     string            `yaml:"ssh-host"`
-	SSHUser     string            `yaml:"ssh-user"`
-	HostSig     string            `yaml:"host-sig,omitempty"`
-	DNSMap      map[string]string `yaml:"dns-map"`
-	SSHKey      string            `yaml:"ssh-key"`
+	ProxyListen string        `yaml:"proxy-listen"`
+	SSHHost     string        `yaml:"ssh-host"`
+	SSHUser     string        `yaml:"ssh-user"`
+	HostSig     string        `yaml:"host-sig,omitempty"`
+	DNSMap      yaml.MapSlice `yaml:"dns-map"`
+	SSHKey      string        `yaml:"ssh-key"`
 }
 
 func fileExists(filename string) bool {
@@ -70,7 +70,12 @@ func (cfg config) save() {
 
 func (cfg config) mapHost(name string) string {
 	host := strings.ToLower(name)
-	for k, v := range cfg.DNSMap {
+	for _, entry := range cfg.DNSMap {
+		k, kok := entry.Key.(string)
+		v, vok := entry.Value.(string)
+		if !kok || !vok {
+			log.Fatalf("Invalid entry in dns-map - keys and values must be strings key=%v value=%v", entry.Key, entry.Value)
+		}
 		matched, err := filepath.Match(k, host)
 		if err != nil {
 			log.Fatalf("map host error for entry=%s host=%s", k, host)

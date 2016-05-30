@@ -112,7 +112,7 @@ ssh-key: |
 * **host-sig** - The expected signature of the remote server - sshproxy will check that the signature presented by the server matches this
 to prevent man-in-the-middle attacks.  If it's omitted, sshproxy will prompt on first connection and then save it in the configuraiton file
 * **dns-map** - A map of hostname patterns to map to an alternative IP address.  The patterns may include asterisk and period operators per 
-the Match function documented here https://golang.org/pkg/path/#Match
+the Match function documented here https://golang.org/pkg/path/#Match.  Order is important as the first matching pattern is selected.
 * **ssh-key** - The ssh key to use to connect to the SSH server.  Must not be encrypted with a passphrase.  **NOTE** Each line of the key
 file must be indented.
 
