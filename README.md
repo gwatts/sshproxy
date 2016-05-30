@@ -14,6 +14,8 @@ Additionally the proxy can be configuerd to map specific hostnames to
 arbitrary IP addresses, allowing development servers to be reached using
 production hostnames.
 
+[Pre-compiled executables](https://github.com/gwatts/sshproxy/releases) are available for Linux, Mac and Windows.
+
 ## Requirements
 
 Once compiled, the program has no further dependencies; the end user doesn't
