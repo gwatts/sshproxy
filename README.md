@@ -10,11 +10,11 @@ configuration file and then:
 2. Starts an HTTP and HTTPS proxy on the local machine
 3. Opens all requests received from the proxy via the ssh tunnel
 
-Additionally the proxy can be configuerd to map specific hostnames to 
+Additionally the proxy can be configured to map specific hostnames to 
 arbitrary IP addresses, allowing development servers to be reached using
 production hostnames.
 
-[Pre-compiled executables](https://github.com/gwatts/sshproxy/releases) are available for Linux, Mac and Windows.
+[Pre-compiled executables](https://github.com/gwatts/sshproxy/releases) are available for Linux, Mac OS, and Windows.
 
 ## Requirements
 
@@ -23,7 +23,7 @@ need to install ssh clients, or any other software to use the program.
 
 ## Use Case
 
-### Simple Access To Dev Services
+### Simple Access To Development Services
 
 Suppose:
 
@@ -57,7 +57,7 @@ NOTE: sshproxy performs DNS resolution on the remote server, avoiding "DNS leaks
 
 1. Install Go (https://golang.org/dl/) and setup GOPATH
 2. Install Glide (https://github.com/Masterminds/glide)
-3. Clone this repo and run `glide install` to downoad the dependencies
+3. Clone this repo and run `glide install` to download the dependencies
 4. run `go build .` to build the utility
 
 Or just [download a compiled release instead](http://github.com/gwatts/sshproxy/releases/)
@@ -113,7 +113,7 @@ ssh-key: |
 to prevent man-in-the-middle attacks.  If it's omitted, sshproxy will prompt on first connection and then save it in the configuraiton file
 * **dns-map** - A map of hostname patterns to map to an alternative IP address.  The patterns may include asterisk and period operators per 
 the Match function documented here https://golang.org/pkg/path/#Match.  Order is important as the first matching pattern is selected.
-* **ssh-key** - The ssh key to use to connect to the SSH server.  Must not be encrypted with a passphrase.  **NOTE** Each line of the key
+* **ssh-key** - The ssh key to use to connect to the SSH server.  Must not be encrypted with a passphrase.  **NOTE:** Each line of the key
 file must be indented.
 
 ## Configuring The Server
@@ -163,7 +163,7 @@ Make sure the .ssh and authorized_keys file are owned by the proxyuser user `cho
 
 Give the client a compiled copy of sshproxy and a suitable `sshproxy.yaml` file.
 
-On Mac they will have to right click on the program and select "Open" and accept
+On Mac OS they will have to right click on the program and select "Open" and accept
 the warning to run the program to avoid GateKeeper restrictions on unsigned programs.
 
 On Windows you may need to run the program from a command prompt for similar reasons.
