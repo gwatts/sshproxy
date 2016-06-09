@@ -16,7 +16,7 @@ import (
 )
 
 var (
-	cfgFilename = flag.String("config", "", "Filename for configuration file.  Defaults to sshproxy.yml")
+	cfgFilename = flag.String("config", "", "Filename for configuration file. Defaults to "+defaultConfigFilename)
 	noHostCheck = flag.Bool("no-host-check", false, "Disables checking of the ssh host key")
 	saveHostSig = flag.Bool("save-host-sig", false, "Saves the ssh host signature on first connection without prompting")
 )
@@ -97,13 +97,13 @@ func main() {
 			}
 		}
 		c, err = sshClient.Dial(network, addr)
-		log.Printf("DIAL host=%s  target=%s error=%v", host, addr, err)
+		log.Printf("DIAL host=%s target=%s error=%v", host, addr, err)
 		return c, err
 	}
 
 	proxy.OnResponse().DoFunc(func(r *http.Response, ctx *goproxy.ProxyCtx) *http.Response {
 		if r != nil && r.Request != nil {
-			log.Printf("[%d] REQUEST client=%s response=%d  %s %s",
+			log.Printf("[%d] REQUEST client=%s response=%d %s %s",
 				ctx.Session, r.Request.RemoteAddr, r.StatusCode, r.Request.Method, r.Request.URL)
 		}
 		return r
