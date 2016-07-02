@@ -78,7 +78,7 @@ func (cfg config) mapHost(name string) string {
 		}
 		matched, err := filepath.Match(k, host)
 		if err != nil {
-			log.Fatalf("map host error for entry=%s host=%s", k, host)
+			log.Fatalf("Map host error for entry=%s host=%s", k, host)
 		}
 		if matched {
 			return v
